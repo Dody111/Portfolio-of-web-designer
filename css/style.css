@@ -116,7 +116,7 @@ header nav button:focus{
     color: white;
     padding: 0.5rem;
     font-size: 1.1rem;
-    margin-bottom:2rem;
+   
 }
 #about .profile-accounts a:hover{
     color: #ff305b;
@@ -144,6 +144,7 @@ ul{
     background-color: #ff305b;
     padding:0.7rem 1rem;
     margin-right: 0.7rem;
+    margin-bottom:1rem;
     
 }
 @media screen and (max-width:320px){
