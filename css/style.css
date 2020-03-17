@@ -1,0 +1,345 @@
+
+body {
+    color: #555555;
+    font-family: "Roboto",sans-serif;
+    font-weight: 400;
+    animation: fade 1s ease-in-out both;
+}
+@keyframes fade{
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #333;
+}
+section{
+    overflow: auto;
+}
+a:hover{
+    text-decoration: none;
+}
+/* <!-- -------------------- header with logo and navbar--------------------------------------- --> */
+
+header {
+    box-shadow: 0 1px 3px rgba(50, 50, 50, 0.4);
+    background: #333;
+    /* width: 100%; */
+    z-index: 99999;
+}
+header .navbar-brand{
+    color: #ff305b !important;
+    font-weight: bold;
+    font-size: 1.5rem;
+
+}
+header .nav-link{
+    color: white !important; 
+    letter-spacing: 0.5px;
+}
+header .nav-link:hover{
+    color: #ff305b !important;
+}
+header .active{
+    color: #ff305b !important;
+}
+header nav button:focus{
+    outline: 5px auto #ff305b !important;
+}
+/* @media screen and (min-width:1024px){
+    header{
+        position: fixed;
+        top: 0;
+    }
+} */
+
+
+
+
+/* <!-- -------------------------Banner section--------------------- --> */
+
+#banner{
+    height: 100vh;
+    background-image: url(../images/banner.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+#banner .layer{
+    height: 100%;
+    background-color: rgb(0, 0,0,0.8);
+}
+
+#banner h1{
+    
+    color: #ff305b;
+    font-weight: bold;
+    font-size: 4.5rem;
+}
+#banner h4{
+    color: white;
+    font-weight: 400;
+    animation: show 2s both infinite;
+}
+@keyframes show{
+    0%{transform: scale(0.7);}
+    100%{transform: scale(1.2);}
+
+}
+#banner h3{
+    font-size:1.5rem ;
+    color: white;
+}
+
+/* <!-- ---------------------------------about section------------------------------------------------- --> */
+
+#about .profile {
+    /* transform: translate(6%,5%); */
+    overflow: hidden;
+    
+}
+#about .profile-accounts{
+    width: 100%;
+    height: 100%;
+    top: 100%;
+    left: 0;
+    background-color:rgba(0, 0 ,0,0.57);
+    opacity: 0;
+    transition: top 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+#about .profile:hover .profile-accounts{
+    top: 0;
+    opacity: 1;
+}
+#about .profile-accounts a{
+    color: white;
+    padding: 0.5rem;
+    font-size: 1.1rem;
+}
+#about .profile-accounts a:hover{
+    color: #ff305b;
+}
+#about .profile-inner h2 span{
+    color: #ff305b;
+}
+#about .profile-info {
+    border-top:dashed #555555 1px
+}
+#about .profile-info li{
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+#about .profile-info li span{
+    font-weight: 600;
+    color: #333333;
+}
+ul{
+    list-style: none;
+}
+
+#about .btn-color{
+    color: white;
+    background-color: #ff305b;
+    padding:0.7rem 1rem;
+    margin-right: 0.7rem;
+    
+}
+@media screen and (max-width:320px){
+    #about .btn-color{
+        
+        padding:0.4rem 0.4rem;
+        margin-right: 0.1rem;
+    }    
+    
+}
+
+#about .btn-color:hover{
+    background-color: #EC2403;
+}
+#about .btn i{
+    padding: 0 0.5rem 0 1rem;
+}
+
+/* <!-- ---------------------------------services section------------------------------------------------- --> */
+
+
+#services,#counters,#contact{
+    background-color: #f1f1f1;
+}
+
+#services i{
+    color: #ff305b;
+    font-size: 2.3rem;
+    display: block;
+    margin-bottom: 2rem;
+}
+#services .services-inner{
+    
+    transition: all 0.3s ease-in-out;
+}
+#services .col-lg-3:hover .services-inner{
+    background-color: white;
+    box-shadow: 0px 15px 20px  rgba(0, 0, 0, 0.1);
+    transform: scale(1.1);
+}
+#services h3{
+    font-size: 1.6rem;
+
+}
+/* <!-- ---------------------------------h2 in all sections------------------------------------------------- --> */
+
+section h2.secondary{
+    font-size: 2.5rem;
+    font-weight: bold;
+    position: relative;
+    margin-bottom: 4rem;
+    
+}
+section h2.secondary::before{
+    content: "";
+    width: 4rem;
+    height: 11px;
+    border-bottom: #ff305b solid 0.5px;
+    border-top: #ff305b solid 0.5px;
+    left: 0;
+    margin: 0 auto;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    
+   
+    
+}
+section h2.secondary::after{
+    content: "";
+    width: 9.5rem;
+    height: 1px;
+    background-color: #ff305b;
+    left: 0;
+    margin: 0 auto;
+    position: absolute;
+    right: 0;
+    top: 110%;
+}
+
+
+/* <!-- ---------------------------------portfolio section------------------------------------------------- --> */
+#portfolio li a{
+    color: #333;
+}
+#portfolio li a.active{
+    color: #ff305b;
+}
+#portfolio .portfolio-background{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color:rgba(0, 0 ,0,0.57);
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    color: #ff305b;
+}
+#portfolio .portfolio-inner:hover .portfolio-background{
+    opacity: 1;
+}
+#portfolio .portfolio-background i{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-size: 1.2rem;
+    padding: 1rem;
+}
+
+/* <!-- ---------------------------------counters section------------------------------------------------- --> */
+
+#counters i{
+    color: #ff305b;
+    font-size: 1.5rem;
+
+}
+
+#counters h5{
+    color: #555555;
+    font-size: 1rem;
+}
+
+
+/* <!-- ---------------------------------blog section------------------------------------------------- --> */
+
+
+#blog .blog-inner{
+    background-color:#f1f1f1;
+    box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.205);
+    
+}
+#blog .blog-info{
+    padding:  1rem ;
+}
+#blog .blog-info h3 a{
+    color: #333;
+}
+#blog .read-more{
+    color: #555555;
+}
+#blog .blog-info h3 a:hover , #blog .read-more:hover{
+    color: #ff305b;
+}
+
+/* <!-- ---------------------------------contact section------------------------------------------------- --> */
+
+
+#contact .btn-color{
+    background-color:#ff305b;
+    color: white;
+}
+
+#contact .btn-color:hover{
+    background-color: #EC2403;
+    cursor: not-allowed;
+}
+#contact input,#contact textarea{
+    border: 1px solid #ccc;
+    color: #555555;
+}
+#contact input:focus,#contact textarea:focus{
+    border: 2px solid #EC2403;
+    outline: none;
+}
+
+/* <!-- ---------------------------------Footer section------------------------------------------------- --> */
+
+
+footer {
+    background-color: #333;
+    color: white;
+}
+footer i{
+    color: white;
+    padding: 1rem;
+    font-size: 1.2rem;
+}
+footer i:hover{
+    color: #ff305b;
+}
+footer p a{
+    color: #ff305b;
+}
+footer p a:hover{
+    color: #EC2403;
+}
+
+/*************************desktop design for profile pic************/
+
+@media screen and (min-width:992px){
+    #about .profile-image-brdr{
+        visibility: visible;
+        border: 8px solid #555555;
+    }
+    #about .profile {
+        transform: translate(6%,5%);
+        overflow: hidden;
+        
+    }
+}
