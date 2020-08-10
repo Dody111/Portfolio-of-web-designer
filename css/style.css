@@ -20,16 +20,52 @@ section{
 a:hover{
     text-decoration: none;
 }
+/* setting color box section*/
+
+#settings{
+   
+    position: fixed;
+    top:150px;
+    left:0px;
+    z-index: 9999;
+    display: flex;
+}
+#settings h5{
+    font-weight: 400;
+}
+.color-box{
+    padding:10px;
+    border:solid 2px rgb(15, 15, 15);
+    background-color:#f1f1f1;
+    
+}
+.color-box .color-item{
+    width:30px;
+    height: 30px;
+    display: inline-block;
+    background-color: rgb(22, 139, 100);
+    cursor: pointer;
+    
+}
+#settings i{
+    padding: 7px;
+    color: white;
+    width: 30px;
+    height: 30px;
+    background-color:rgb(15, 15, 15); 
+    cursor: pointer;
+}
+
 /* <!-- -------------------- header with logo and navbar--------------------------------------- --> */
 
 header {
     box-shadow: 0 1px 3px rgba(50, 50, 50, 0.4);
-    background: #333;
+    /* background: transparent; */
     /* width: 100%; */
     z-index: 99999;
 }
-header .navbar-brand{
-    color: #ff305b !important;
+header .brand{
+    color: #ff305b ;
     font-weight: bold;
     font-size: 1.5rem;
 
@@ -39,11 +75,14 @@ header .nav-link{
     letter-spacing: 0.5px;
 }
 header .nav-link:hover{
-    color: #ff305b !important;
+    /* color: #949393 !important; */
+    font-weight: 900;
+    text-shadow: 0px 0px 1.5px rgba(255, 255, 255, 0.705);
+
 }
-header .active{
-    color: #ff305b !important;
-}
+/* header .active{
+    color: #ff305b ;
+} */
 header nav button:focus{
     outline: 5px auto #ff305b !important;
 }
@@ -116,10 +155,9 @@ header nav button:focus{
     color: white;
     padding: 0.5rem;
     font-size: 1.1rem;
-   
 }
-#about .profile-accounts a:hover{
-    color: #ff305b;
+#about .profile-accounts i:hover{
+    text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.705);
 }
 #about .profile-inner h2 span{
     color: #ff305b;
@@ -144,7 +182,6 @@ ul{
     background-color: #ff305b;
     padding:0.7rem 1rem;
     margin-right: 0.7rem;
-    margin-bottom:1rem;
     
 }
 @media screen and (max-width:320px){
@@ -323,7 +360,8 @@ footer i{
     font-size: 1.2rem;
 }
 footer i:hover{
-    color: #ff305b;
+    text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.705);
+
 }
 footer p a{
     color: #ff305b;
@@ -331,7 +369,13 @@ footer p a{
 footer p a:hover{
     color: #EC2403;
 }
-
+.slideUp{
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+    display: none;
+    z-index: 999999;
+}
 /*************************desktop design for profile pic************/
 
 @media screen and (min-width:992px){
